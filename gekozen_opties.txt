@@ -1,0 +1,19 @@
+1     	Rossen              	Maarten             	aanwezig  
+2     	Heijmans            	Stan                	aanwezig  
+3     	Rutten              	Bram                	aanwezig  
+4     	Massink             	Henk                	aanwezig  
+5     	Berkel              	Willem van          	aanwezig  
+6     	Haans               	Kaz                 	aanwezig  
+7     	Quint               	Jorik               	aanwezig  
+8     	Klein Douwel        	John                	aanwezig  
+9     	Rutjes              	Twan                	aanwezig  
+10    	Berg                	Henk van den        	aanwezig  
+11    	Sewalt              	Justin              	aanwezig  
+12    	Dijk                	Simon van           	aanwezig  
+13    	Laurant             	Sjaak               	aanwezig  
+14    	Tol                 	Stein van           	aanwezig  
+15    	Rossen              	Siebe               	aanwezig  
+16    	Rutten              	Henk                	aanwezig  
+17    	Verhaaren           	Albert              	aanwezig  
+18    	Stegman             	Kosse               	aanwezig  
+19    	Brouwer             	Joey                	aanwezig  

@@ -14,20 +14,17 @@ def maak_venster():
     knoppen_frame = tk.Frame(root)
     knoppen_frame.pack(side="left", padx=20, pady=20)
 
-    # Maak een knop om de spelers van groep A in te lezen
-    inlezen_A_button = tk.Button(knoppen_frame, text="Inlezen groep A")
-    inlezen_A_button.pack(side="top", pady=10)
-
-    # Maak een knop om de spelers van groep BC in te lezen
-    inlezen_BC_button = tk.Button(knoppen_frame, text="Inlezen groep BC")
-    inlezen_BC_button.pack(side="top", pady=10)
+    # Maak een knop om de spelers in te lezen
+    inlezen_spelers_button = tk.Button(knoppen_frame, text="Inlezen spelers")
+    inlezen_spelers_button.pack(side="top", pady=10)
 
     # Plaats de frame aan de linkerkant, bovenin het venster
     knoppen_frame.place(x=10, y=50)
 
-    return root, inlezen_A_button, inlezen_BC_button  # Geef het vensterobject en de knoppen terug aan het hoofdscript
+    return root, inlezen_spelers_button  # Geef het vensterobject en de knop terug aan het hoofdscript
 
-def toon_spelers(spelersA):
+
+def toon_spelers(spelers):
     # Maak een nieuw venster
     spelers_venster = tk.Toplevel()
 
@@ -53,16 +50,18 @@ def toon_spelers(spelersA):
     # Bepaal een minimale breedte voor de kolom met de spelerlabels
     min_breedte = 200
 
-    # Loop door de spelersA lijst en voeg de namen en keuzelijsten toe aan het venster
-    for speler in spelersA:
-        naam, voornaam, elo = speler
+    selected_options = []  # Voeg deze regel toe om de lijst van StringVar objecten bij te houden
 
-        # Maak een frame voor de naam en de keuzelijst
+    # Loop door de spelersA lijst en voeg de nummers, namen en keuzelijsten toe aan het venster
+    for speler in spelers:
+        nummer, naam, voornaam, elo = speler  # Voeg 'nummer' toe aan de unpacking
+
+        # Maak een frame voor het nummer, de naam en de keuzelijst
         speler_frame = tk.Frame(container_frame)
         speler_frame.pack(anchor="w", padx=5, pady=5)
 
-        # Maak een label met de naam van de speler en voeg deze toe aan het frame
-        speler_label = tk.Label(speler_frame, text=f"{naam} {voornaam}")
+        # Maak een label met het nummer, de naam en de voornaam van de speler en voeg deze toe aan het frame
+        speler_label = tk.Label(speler_frame, text=f"{nummer}. {naam} {voornaam}")  # Voeg het nummer toe aan de tekst
         speler_label.grid(row=0, column=0, sticky="w")
 
         # Stel de minimale breedte in voor de kolom met de spelerlabels
@@ -76,16 +75,8 @@ def toon_spelers(spelersA):
         option_menu = tk.OptionMenu(speler_frame, selected_option, *opties)
         option_menu.grid(row=0, column=1, sticky="e")
 
-        selected_options = []  # Voeg deze regel toe om de lijst van StringVar objecten bij te houden
-
-        # Loop door de spelersA lijst en voeg de namen en keuzelijsten toe aan het venster
-        for speler in spelersA:
-
-            # Maak een StringVar om de geselecteerde optie voor de speler op te slaan
-            selected_option = tk.StringVar()
-            selected_option.set(opties[0])  # Stel de standaardoptie in op 'aanwezig'
-
-            selected_options.append(selected_option)  # Voeg het StringVar object toe aan de lijst
+        # Voeg het StringVar object toe aan de lijst
+        selected_options.append(selected_option)
 
     # Werk de scrollregion bij wanneer de canvas verandert
     container_frame.update_idletasks()
@@ -93,16 +84,56 @@ def toon_spelers(spelersA):
 
     def verwerk_aanwezigheid():
         gekozen_opties = []
-        for speler, selected_option in zip(spelersA, selected_options):
-            naam, voornaam, elo = speler
-            gekozen_optie = (naam, voornaam, selected_option.get())
+        for speler, selected_option in zip(spelers, selected_options):
+            nummer, naam, voornaam, elo = speler
+            gekozen_optie = (nummer, naam, voornaam, selected_option.get())
             gekozen_opties.append(gekozen_optie)
 
+        print("De volgende opties zijn gekozen:")
         print(gekozen_opties)  # Verwijder deze regel of vervang deze door een gewenste actie met de lijst 'gekozen_opties'
+        schrijf_gekozen_opties(gekozen_opties)
+
+    def schrijf_gekozen_opties(gekozen_opties):
+        with open("gekozen_opties.txt", "w") as file:
+            for optie in gekozen_opties:
+                nummer, naam, voornaam, gekozen_optie = optie
+                formatted_line = "{:<6}\t{:<20}\t{:<20}\t{:<10}\n".format(
+                    nummer, naam, voornaam, gekozen_optie
+                )
+                file.write(formatted_line)
+
+    def lees_gekozen_opties():
+        gekozen_opties = []
+
+        with open("gekozen_opties.txt", "r") as file:
+            for line in file:
+                # Verwijder witruimte en splits de regel op tabs
+                nummer, naam, voornaam, gekozen_optie = line.strip().split('\t')
+
+                # Verwijder alle spaties na de tekst in elke kolom
+                nummer = nummer.rstrip()
+                naam = naam.rstrip()
+                voornaam = voornaam.rstrip()
+                gekozen_optie = gekozen_optie.rstrip()
+
+                # Converteer het nummer naar een integer
+                nummer = int(nummer)
+
+                # Voeg het nummer, naam, voornaam en gekozen_optie toe aan de gekozen_opties lijst
+                gekozen_opties.append((nummer, naam, voornaam, gekozen_optie))
+
+        print("De volgende opties zijn ingelezen:")
+        print(gekozen_opties)  # Verwijder deze regel of vervang deze door een gewenste actie met de lijst 'gekozen_opties'
+
+        return gekozen_opties
+
+    # Maak een knop om de gekozen opties in te lezen en voeg deze toe aan het venster
+    inlezen_opties_button = tk.Button(spelers_venster, text="Inlezen gekozen opties", command=lees_gekozen_opties)
+    inlezen_opties_button.pack(side="bottom", anchor="w", pady=10)
 
     # Maak een knop om de aanwezigheid van spelers te verwerken en voeg deze toe aan het venster
     verwerk_button = tk.Button(spelers_venster, text="Verwerk aanwezigheid", command=verwerk_aanwezigheid)
-    verwerk_button.pack(pady=10)
+    verwerk_button.pack(side="bottom", anchor="w", pady=10)
 
     # Toon het venster
     spelers_venster.mainloop()
