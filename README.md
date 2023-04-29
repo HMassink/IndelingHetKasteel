@@ -16,8 +16,7 @@ In eerste instantie gaat het om het opzetten van de grafische schil. Het maken v
 
 Software is python3.11.  
 
-Mappenstruktuur project :
-
+MAPPENSTRUCTUUR:
 Hoofdmap IndelingHetKasteel    
     hoofprogramm :  IndelingHetKasteel.py
 submappen :
@@ -36,11 +35,39 @@ submappen :
 - txt_werkfiles
      Tijdelijke opslagfile van lijsten. Mogelijk zijn deze niet nodig.
 - txt_communicatie
-     Txt files met uitslagen rondes, stand, kruistabellen, rating, jaarstand. Mogelijk zijn deze files niet nodig.
+     Txt files met uitslagen rondes, stand, kruistabellen, rating, jaarstand. Deze files kunnen eventueel geprint worden.
 - html_communicatie
      Html files met uitslagen rondes, stand, kruistabellen, rating, jaarstand. Deze html bestanden worden gebruikt voor publicatie op de website.
 
 De databases (lijsten) worden opgeslagen als txt files
 
-Mogelijke lijst van vensters
-- Hoofdvenster
+VENSTERS :
+- hoofd_venster
+    Geeft aan om welke periode en ronde het gaat.
+    Bevat vooral knoppen om andere vensters te activeren
+- aanwezige_spelers_venster
+    Per speler aangeven wat de status voor de betreffende speelavond is
+- indeling_venster
+    De indeling voor de betreffende speelavond. In dit venster kan ook per partij de uitslag aangegeven worden
+
+LIJSTEN :
+- spelers
+    Lijst voor spelers die gaan meedoen aan het begin van het toernooi, inclusief start elo
+- informatie
+    Lijst met de informatie over het toernooi inclusief de actuele periode en rondes
+- spelers_aanwezig
+    Lijst voor spelers die aanwezig zijn op de clubavond
+- spelers_totaal_jaar
+    Lijst met het totaal overzicht van alle spelers tegenstanders, punten enz gaat over alle periodes, is ook basis voor rating en jaarlijst
+- spelers_totaal_periode1
+    Lijst met het totaal overzicht van alle spelers tegenstanders, punten enz gaat over periode 1
+- spelers_totaal_periode2
+    Lijst met het totaal overzicht van alle spelers tegenstanders, punten enz gaat over periode 2
+- spelers_totaal_periode3
+    Lijst met het totaal overzicht van alle spelers tegenstanders, punten enz gaat over periode 3
+- indeling
+    Lijst met de indeling van de actuele ronde
+    N.B.  De uitslagen van de afzonderlijke rondes worden opgeslagen in afzonderlijke txt en html files 
+
+
+
