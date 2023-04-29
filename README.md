@@ -2,15 +2,21 @@
 
 Under construction.  Dit is ook mijn file met notities. gebruik ik ook voor communicatie met ChatGPT4 :-)
  
+Algemene beschrijving
+De schaakcompetitie van Schaakvereniging Het Kasteel bestaat uit 3 periodes van elk 9 rondes. Daarbij zitten de spelers in 3 categorieen A, B of C. Tevens wordt er een totaalstand bijgehouden. Aan het eind van het jaar wordt er per catagorie een finalegroep van 4 samengesteld, bestaande uit de winnaars van ieder periode en de speler die over het gehele jaar het beste gescoord heeft. Op deze wijze is er per categorie een kampioen. 
+Indelen gebeurt op basis van het zwitsers systeem. Bij gelijk eindigen zijn de Sonneborn Berger punten van belang
+
+
 Doel is om op eenvoudige wijze de competitie indelingen op de clubavonden te maken en de resultaten te publiceren.
 Indeling wordt op de avond zelf gedaan. Alle namen van de leden komen op het scherm, per speler kan ingegeven worden : aanwezig, afwezig, vrij , 0 punt, 0,5 punt, 1 punt.  Vervolgens gaat jhet indelen automatisch. Nadat de resultaten zijn ingevoerd, wordt de stand, de jaarstand, en de rating automatisch gegenereeerd. 
 Het programma genereert html-files die op de website gepubliceerd kunnen worden.
+
 
 In eerste instantie gaat het om het opzetten van de grafische schil. Het maken van de indeling en genereren stand komt later. 
 
 Software is python3.11.  
 
-Mappen struktuur project
+Mappenstruktuur project :
 
 Hoofdmap IndelingHetKasteel    
     hoofprogramm :  IndelingHetKasteel.py
