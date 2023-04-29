@@ -94,7 +94,7 @@ def toon_spelers(spelers):
         schrijf_gekozen_opties(gekozen_opties)
 
     def schrijf_gekozen_opties(gekozen_opties):
-        with open("gekozen_opties.txt", "w") as file:
+        with open("../txt_werkfiles/gekozen_opties.txt", "w") as file:
             for optie in gekozen_opties:
                 nummer, naam, voornaam, gekozen_optie = optie
                 formatted_line = "{:<6}\t{:<20}\t{:<20}\t{:<10}\n".format(
@@ -105,7 +105,7 @@ def toon_spelers(spelers):
     def lees_gekozen_opties():
         gekozen_opties = []
 
-        with open("gekozen_opties.txt", "r") as file:
+        with open("../txt_werkfiles/gekozen_opties.txt", "r") as file:
             for line in file:
                 # Verwijder witruimte en splits de regel op tabs
                 nummer, naam, voornaam, gekozen_optie = line.strip().split('\t')

@@ -1,10 +1,6 @@
-import venster
-import lijsten
-
-from venster import toon_spelers
-from lijsten import spelers
-from lijsten import spelers_aanwezig
-
+from py_vensters.hoofd_venster import toon_spelers
+from py_vensters.hoofd_venster import maak_venster
+from py_lijsten.lijsten import spelers
 
 
 def inlezen_spelers():
@@ -12,7 +8,7 @@ def inlezen_spelers():
     spelers.clear()
 
     # Open het tekstbestand in leesmodus
-    with open("spelers.txt", "r") as file:
+    with open("txt_databases/spelers.txt", "r") as file:
         for line in file:
             # Verwijder witruimte en splits de regel op komma's
             naam, voornaam, elo = line.strip().split(',')
@@ -35,7 +31,7 @@ def inlezen_spelers():
 
 def main():
     # Maak een venster met de benodigde knoppen
-    root, inlezen_spelers_button = venster.maak_venster()
+    root, inlezen_spelers_button = maak_venster()
 
     # Koppel de functie 'inlezen_spelers' aan de knop 'inlezen_spelers_button'
     inlezen_spelers_button.config(command=inlezen_spelers)

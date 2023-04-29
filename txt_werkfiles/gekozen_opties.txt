@@ -5,7 +5,7 @@
 5     	Berkel              	Willem van          	aanwezig  
 6     	Haans               	Kaz                 	aanwezig  
 7     	Quint               	Jorik               	aanwezig  
-8     	Klein Douwel        	John                	aanwezig  
+8     	Klein Douwel        	John                	afwezig   
 9     	Rutjes              	Twan                	aanwezig  
 10    	Berg                	Henk van den        	aanwezig  
 11    	Sewalt              	Justin              	aanwezig  
