@@ -77,15 +77,22 @@ Vertaald:
 C.04.1 Basisregels voor Zwitserse Systemen
 De volgende regels zijn geldig voor elk Zwitsers systeem, tenzij uitdrukkelijk anders vermeld.
 a Het aantal te spelen ronden wordt vooraf vastgesteld.
+
 b Twee spelers mogen niet meer dan één keer tegen elkaar spelen.
+
 c Als het aantal te koppelen spelers oneven is, wordt één speler niet gekoppeld. Deze speler krijgt een door het koppelingssysteem toegewezen bye: geen tegenstander, geen kleur en evenveel punten als er worden beloond voor een overwinning, tenzij de regels van het toernooi anders bepalen.
+
 d Een speler die al een door het koppelingssysteem toegewezen bye heeft gekregen, of al een (reglementaire) overwinning heeft behaald doordat een tegenstander niet op tijd verscheen, mag geen bye krijgen die door het koppelingssysteem is toegewezen.
+
 e In het algemeen worden spelers gekoppeld aan anderen met dezelfde score.
-f Voor elke speler mag het verschil tussen het aantal zwarte en het aantal witte partijen niet groter zijn dan 2 of kleiner dan -2.
-Elk systeem kan uitzonderingen op deze regel hebben in de laatste ronde van een toernooi.
-g Geen enkele speler mag drie keer achter elkaar dezelfde kleur krijgen.
-Elk systeem kan uitzonderingen op deze regel hebben in de laatste ronde van een toernooi.
+
+f Voor elke speler mag het verschil tussen het aantal zwarte en het aantal witte partijen niet groter zijn dan 2 of kleiner dan -2.Elk systeem kan uitzonderingen op deze regel hebben in de laatste ronde van een toernooi.
+
+g Geen enkele speler mag drie keer achter elkaar dezelfde kleur krijgen. Elk systeem kan uitzonderingen op deze regel hebben in de laatste ronde van een toernooi.
+
 h1 In het algemeen krijgt een speler de kleur waarmee hij minder partijen heeft gespeeld.
+
 h2 Als de kleuren al in evenwicht zijn, krijgt de speler over het algemeen de kleur die afwisselt met de laatste waarmee hij heeft gespeeld.
+
 i De koppelingsregels moeten zo transparant zijn dat de persoon die verantwoordelijk is voor de koppeling ze kan uitleggen.
 
