@@ -1,7 +1,7 @@
 from py_vensters.hoofd_venster import toon_spelers
 from py_vensters.hoofd_venster import maak_venster
 from py_lijsten.lijsten import spelers
-
+from py_tijdelijk.voorbeeld_vensters import maak_voorbeeld_venster
 
 def inlezen_spelers():
     # Maak de spelersA lijst leeg
@@ -35,6 +35,9 @@ def main():
 
     # Koppel de functie 'inlezen_spelers' aan de knop 'inlezen_spelers_button'
     inlezen_spelers_button.config(command=inlezen_spelers)
+
+    # Roep het voorbeeldvenster aan
+    maak_voorbeeld_venster()
 
     # Start de tkinter event loop
     root.mainloop()
