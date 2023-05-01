@@ -1,6 +1,7 @@
 # IndelingHetKasteel
 
 Under construction.  Dit is ook mijn file met notities. gebruik ik ook voor communicatie met ChatGPT4 :-)
+
 Update 01-05-2023 : Ipv van textfiles ga ik SQlite gebruiken om de data op te slaan. Ik ga notebook gebruiken om alle vensters in één venster via tabbladen zichtbaar te maken
  
 Algemene beschrijving
