@@ -55,6 +55,8 @@ TABELLEN IN DATABASE :
     Tabel met de informatie over het toernooi inclusief de actuele periode en rondes
 - spelers_aanwezig :
     Tabel voor spelers die aanwezig zijn op de clubavond
+- spelers_vrij :
+    Tabel voor spelers die vrij geloot zijn gedurenden het seizoen
 - spelers_totaal_jaar :
     Tabel met het totaal overzicht van alle spelers tegenstanders, punten enz gaat over alle periodes, is ook basis voor rating en jaarlijst
 - spelers_totaal_periode1 :
