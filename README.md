@@ -22,8 +22,10 @@ Voor het bewerken van de SQLite database gebruik ik : https://sqlitebrowser.org/
 MAPPENSTRUCTUUR:
 Hoofdmap IndelingHetKasteel    
     hoofprogramma :  IndelingHetKasteel.py
-    database :       IndelingHetKasteel.sqlite
+           
 submappen :
+- py_databse :
+     IndelingHetKasteel.sqlite. Plus funktie om toegang te krijgen tot tabellen in de database
 - py_vensters :
      Met het gebuik van notebook zal dit mogelijk anders worden ingevuld
      Per venster een py_file met daarin de definitie van het venster en de knoppen en invoervelden
@@ -36,8 +38,6 @@ submappen :
      Tijdelijke opslagfile van lijsten, voor het uitvoeren van berekeningen enz. Mogelijk niet nodig
 - html_communicatie :
      Html files met uitslagen rondes, stand, kruistabellen, rating, jaarstand. Deze html bestanden worden gebruikt voor publicatie op de website.
-
-De databases (lijsten) worden opgeslagen als txt files
 
 VENSTERS (Worden tab in notebook):
 - hoofd_venster :
