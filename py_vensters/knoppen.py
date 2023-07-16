@@ -1,10 +1,37 @@
+import csv
+import random
+import os
 def inlezen_spelers(hoofdvenster):
-    # Implementeer de functie om de spelers in te lezen
-    hoofdvenster.print_to_output("Inlezen Spelers knop is geklikt, implementeer de functie hier")
+    try:
+        with open('py_database/spelers.txt', 'r') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                achternaam, voornaam, elo, groep = row
+                # Je kunt de ingelezen waarden nu verder verwerken
+                # Bijvoorbeeld, print ze naar het output venster:
+                hoofdvenster.print_to_output(
+                    f"Achternaam: {achternaam}, Voornaam: {voornaam}, Elo: {elo}, Groep: {groep}")
+    except Exception as e:
+        hoofdvenster.print_to_output(f"Er is een fout opgetreden bij het inlezen van de spelers: {str(e)}")
 
 def uitlezen_spelers(hoofdvenster):
-    # Implementeer de functie om de uit te lezen
-    hoofdvenster.print_to_output("Uitlezen Spelers knop is geklikt, implementeer de functie hier")
+    try:
+        # Maak de map aan als deze nog niet bestaat
+        os.makedirs('py_database', exist_ok=True)
+
+        with open('py_database/spelersuit.txt', 'w') as file:
+            for _ in range(20):
+                voornaam = f"Voornaam{_}"
+                achternaam = f"Achternaam{_}"
+                elo = random.randint(1000, 2800)  # Genereer een willekeurige ELO-rating tussen 1000 en 2800
+                groep = random.choice(['A', 'B', 'C', 'D'])  # Kies willekeurig een groep uit de lijst ['A', 'B', 'C', 'D']
+
+                # Schrijf de spelerinformatie naar het bestand zonder labels
+                file.write(f"{achternaam}, {voornaam}, {elo}, {groep}\n")
+
+            hoofdvenster.print_to_output("Spelersinformatie succesvol weggeschreven naar py_database/spelersuit.txt")
+    except Exception as e:
+        hoofdvenster.print_to_output(f"Er is een fout opgetreden bij het wegschrijven van de spelersinformatie: {str(e)}")
 
 def toernooi_informatie(hoofdvenster):
     # Implementeer de functie om de toernooi informatie te tonen

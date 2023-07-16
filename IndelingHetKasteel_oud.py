@@ -8,7 +8,7 @@ def inlezen_spelers():
     spelers.clear()
 
     # Open het tekstbestand in leesmodus
-    with open("txt_werkfiles/spelers.txt", "r") as file:
+    with open("py_database/spelers.txt", "r") as file:
         for line in file:
             # Verwijder witruimte en splits de regel op komma's
             naam, voornaam, elo = line.strip().split(',')
